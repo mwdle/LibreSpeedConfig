@@ -1,0 +1,24 @@
+services:
+  Speedtest:
+    image: lscr.io/linuxserver/librespeed:latest
+    container_name: Speedtest
+    restart: unless-stopped
+    hostname: speedtest
+    networks:
+      - Speedtest
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Denver
+    volumes:
+      - ${DOCKER_VOLUMES}/Speedtest/config:/config
+    deploy:
+      resources:
+        limits: 
+          cpus: '0.20'
+          memory: 80M
+  
+networks:
+  Speedtest:
+    name: Speedtest
+    external: true
