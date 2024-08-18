@@ -2,15 +2,45 @@
 
 A sample Docker Compose file for LibreSpeed.  
 
-## Important Details
+## Table of Contents  
 
-* The Docker Compose file assumes you have already created a Docker network called ```Speedtest```. You can create this network before starting the container by executing the following command: ```docker network create Speedtest```  
-* You must change the ```DOCKER_VOLUMES``` path in the ```.env``` file to a folder on your system where you wish to store container files (used in Docker Compose bind mounts).  
+* [Description](#librespeed-docker-compose-configuration)  
+* [Getting Started](#getting-started)  
+* [License](#license)  
+* [Disclaimer](#disclaimer)  
 
-## Starting the container  
+## Getting Started  
 
-In your terminal, ```cd``` to the directory containing the ```docker-compose.yml``` and ```.env``` files. Run the following command: ```docker compose up -d```  
-Your containers should be up and running and your LibreSpeed instance be accessible on port 80 and 443 in the container. Setup your Docker Networks and reverse proxy accordingly.  
+1. Clone the repository:  
+
+    ```shell
+    git clone https://github.com/mwdle/LibreSpeedConfig.git
+    ```  
+
+2. Change the ```.env``` file properties:  
+
+    ```properties
+    DOCKER_VOLUMES=<PATH_TO_DOCKER_VOLUMES_FOLDER> # A folder on your system to store bind mounts for Docker containers.
+    ```  
+
+3. Open a terminal in the directory containing the docker-compose file.  
+4. Create a docker network for the container:  
+
+    ```shell
+    docker network create Speedtest
+    ```  
+
+5. Start the container:  
+
+    ```shell
+    docker compose up -d
+    ```  
+
+Your container should be up and running and your LibreSpeed instance be accessible on port 80 and 443 in the container. Setup your Docker Networks and reverse proxy accordingly.  
+
+## License  
+
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0). See the [LICENSE](LICENSE.txt) file for details.  
 
 ## Disclaimer  
 
