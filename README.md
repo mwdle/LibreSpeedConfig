@@ -36,7 +36,7 @@ A sample Docker Compose file for LibreSpeed.
     docker compose up -d
     ```  
 
-Your container should be up and running and your LibreSpeed instance be accessible on port 80 and 443 in the container. Setup your Docker Networks and reverse proxy accordingly.  
+Your container should be up and running and your LibreSpeed instance be accessible on port 80 and 443 in the container. Attach your reverse proxy container to the previously created Docker Networks and configure it accordingly.  
 
 ## License  
 
