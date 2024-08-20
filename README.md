@@ -25,7 +25,7 @@ A sample Docker Compose file for LibreSpeed.
     │   └── config/
     ```  
 
-3. Change the ```.env``` file properties for your configuration:  
+3. Change the `.env` file properties for your configuration:  
 
     ```properties
     DOCKER_VOLUMES=<PATH_TO_DOCKER_VOLUMES_FOLDER> # The folder created in the previous step.
