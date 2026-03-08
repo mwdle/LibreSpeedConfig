@@ -9,8 +9,6 @@ services:
       - Speedtest
     environment:
       - MODE=standalone
-    volumes:
-      - ${DOCKER_VOLUMES}/Speedtest/config:/config
     deploy:
       resources:
         limits:
