@@ -1,7 +1,7 @@
 name: Speedtest
 services:
   Speedtest:
-    image: ghcr.io/librespeed/speedtest:latest-alpine
+    image: ghcr.io/librespeed/speedtest:5.5.1-alpine
     container_name: Speedtest
     restart: unless-stopped
     hostname: speedtest
@@ -12,8 +12,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.20"
-          memory: 80M
+          cpus: "0.25"
+          memory: 100M
 
 networks:
   Speedtest:
